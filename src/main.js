@@ -1,11 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import VeeValidate from 'vee-validate'
+import Vue from "vue";
+import App from "./App";
+import VeeValidate from "vee-validate";
+import vSelect from "vue-select";
 
-Vue.config.productionTip = false
-Vue.use(VeeValidate)
+Vue.use(VeeValidate);
+Vue.component("v-select", vSelect);
 
+Vue.config.productionTip = false;
+
+/* eslint-disable no-new */
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: "#app",
+  render: h => h(App)
+});
